@@ -1,4 +1,28 @@
+#pragma once
 #include <stdio.h>
+
+void printSub(int a)
+{
+	if (a > 0)
+	{
+		for (size_t i = 1; i <= (1 << a); i++)
+		{
+			printf("{");
+			for (size_t j = 0; j < a; j++)
+			{
+				if (i & (1 << j))
+				{
+					printf(" O ");
+				}
+				else
+				{
+					printf(" X ");
+				}
+			}
+			printf("}  %d\n", i);
+		}
+	}
+}
 
 void printb(unsigned int v) {
 	unsigned int mask = (int)1 << (sizeof(v) * 7);
@@ -9,7 +33,7 @@ void printb(unsigned int v) {
 	putchar('\n');
 }
 
-int main() 
+void printBit() 
 {
 	// 비트 데이터의 최소 단위 0 1
 	// 1바이트 8비트
