@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-	//°úÁ¦ 1
+	//ê³¼ì œ 1
 	void arr_copy(int *a, int *b, int size) 
 	{
 
@@ -15,7 +15,7 @@
 	printf("\n");
 
 	}
-	//°úÁ¦ 2
+	//ê³¼ì œ 2
 	void string_copy(char *a, char *b, int size)
 	{
 
