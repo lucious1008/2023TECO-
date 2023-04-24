@@ -15,6 +15,9 @@ typedef struct {
 void input_employee(Employee *employees, int *num_employees);
 void sort_employees(Employee *employees, int num_employees);
 void output_employees(Employee *employees, int num_employees);
+void print_employees(Employee *employees);
+
+int count = 0;
 
 int main() {
     Employee employees[MAX_RECORDS];
@@ -23,6 +26,7 @@ int main() {
     input_employee(employees, &num_employees);
     sort_employees(employees, num_employees);
     output_employees(employees, num_employees);
+    print_employees(employees);
 
     return 0;
 }
@@ -56,7 +60,7 @@ void input_employee(Employee *employees, int *num_employees) {
         strcpy(employees[*num_employees].department, department);
         strcpy(employees[*num_employees].position, position);
         strcpy(employees[*num_employees].phone_number, phone_number);
-
+		count += 1;
         (*num_employees)++;
     }
 }
@@ -87,4 +91,15 @@ void output_employees(Employee *employees, int num_employees) {
     }
 
     fclose(fp);
+}
+
+void print_employees(Employee *employees){
+	for(int i=0; i < count; i++){
+		printf("------------------------------------\nSYAINBUN :%d\nNAME :%s\ndepartment :%s\nposition :%s\nphone_number :%s\n"
+		,employees[i].employee_number,
+                employees[i].name,
+                employees[i].department,
+                employees[i].position,
+                employees[i].phone_number);
+	}
 }
