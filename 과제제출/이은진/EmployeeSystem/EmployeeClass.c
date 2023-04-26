@@ -12,24 +12,40 @@ struct Employee {
     char phone[20];
 };
 
-void getInput(struct Employee *employees, int *numEmployees);
-void sortEmployees(struct Employee *employees, int numEmployees);
-void printEmployees(struct Employee *employees, int numEmployees);
-void writeToCSV(struct Employee *employees, int numEmployees);
+void getInput(struct Employee **employees, int *numEmployees);
+void quickSortEmployees(struct Employee **employees, int left, int right);
+void printEmployees(struct Employee **employees, int numEmployees);
+void writeToCSV(struct Employee **employees, int numEmployees);
 
 int main() {
-    struct Employee employees[MAX_RECORDS];
+    struct Employee *employees[MAX_RECORDS];
     int numEmployees = 0;
 
+    // employees 배열의 각 요소를 NULL로 초기화
+    memset(employees, 0, sizeof(employees));
+
     getInput(employees, &numEmployees);
-    sortEmployees(employees, numEmployees);
+    quickSortEmployees(employees, 0, numEmployees - 1);
+
+    // 정렬 후 직원 정보 출력
+    printf("\nソート後の従業員情報:\n");
     printEmployees(employees, numEmployees);
+
+    // CSV 파일 출력
+    printf("\nCSVファイルに書き込みます。\n");
     writeToCSV(employees, numEmployees);
 
+    // employees 배열의 각 요소 메모리 해제
+    for (int i = 0; i < numEmployees; i++) {
+        free(employees[i]);
+    }
+
     return 0;
+
 }
 
-void getInput(struct Employee *employees, int *numEmployees) {
+
+void getInput(struct Employee **employees, int *numEmployees) {
     int newEmployeeNum;
     int i = *numEmployees;
 
@@ -44,26 +60,33 @@ void getInput(struct Employee *employees, int *numEmployees) {
 
         int j;
         for (j = 0; j < i; j++) {
-            if (employees[j].employeeNumber == newEmployeeNum) {
+            if (employees[j]->employeeNumber == newEmployeeNum) {
                 printf("同一社員番号があります。社員番号を確認お願いします。\n");
                 break;
             }
         }
 
         if (j == i) {
-            employees[i].employeeNumber = newEmployeeNum;
+            // 새로운 Employee 구조체 동적 할당
+            struct Employee *newEmployee = malloc(sizeof(struct Employee));
+
+            // 입력 받은 데이터로 초기화
+            newEmployee->employeeNumber = newEmployeeNum;
 
             printf("名前: ");
-            scanf("%s", employees[i].name);
+            scanf("%s", newEmployee->name);
 
             printf("所属部署: ");
-            scanf("%s", employees[i].department);
+            scanf("%s", newEmployee->department);
 
             printf("職位: ");
-            scanf("%s", employees[i].position);
+            scanf("%s", newEmployee->position);
 
             printf("電話番号: ");
-            scanf("%s", employees[i].phone);
+            scanf("%s", newEmployee->phone);
+
+            // employees 배열의 i번째 요소를 새로운 Employee 구조체의 포인터로 설정
+            employees[i] = newEmployee;
 
             i++;
             *numEmployees = i;
@@ -71,43 +94,58 @@ void getInput(struct Employee *employees, int *numEmployees) {
     }
 }
 
-void sortEmployees(struct Employee *employees, int numEmployees) {
-    int i, j;
-    struct Employee temp;
 
-    for (i = 0; i < numEmployees - 1; i++) {
-        for (j = i + 1; j < numEmployees; j++) {
-            if (employees[i].employeeNumber > employees[j].employeeNumber) {
-                temp = employees[i];
+void quickSortEmployees(struct Employee **employees, int left, int right) {
+    if (left < right) {
+        int pivot = employees[right]->employeeNumber;
+        int i = left - 1;
+        for (int j = left; j <= right - 1; j++) {
+            if (employees[j]->employeeNumber < pivot) {
+                i++;
+                struct Employee *temp = employees[i];
                 employees[i] = employees[j];
                 employees[j] = temp;
             }
         }
+        struct Employee *temp = employees[i + 1];
+        employees[i + 1] = employees[right];
+        employees[right] = temp;
+
+        int partitionIndex = i + 1;
+        quickSortEmployees(employees, left, partitionIndex - 1);
+        quickSortEmployees(employees, partitionIndex + 1, right);
     }
 }
 
-void printEmployees(struct Employee *employees, int numEmployees) {
-    int i;
-
-    printf("\n社員番号, 名前, 所属部署, 職位, 電話番号\n");
-    for (i = 0; i < numEmployees; i++) {
-        printf("%d, %s, %s, %s, %s\n", employees[i].employeeNumber, employees[i].name,
-               employees[i].department, employees[i].position, employees[i].phone);
+void printEmployees(struct Employee **employees, int numEmployees) {
+    printf("\n従業員情報:\n");
+    printf("社員番号\t名前\t\t所属部署\t\t職位\t\t電話番号\n");
+    for (int i = 0; i < numEmployees; i++) {
+        printf("%d\t\t%s\t\t%s\t\t%s\t\t%s\n", employees[i]->employeeNumber, employees[i]->name, employees[i]->department, employees[i]->position, employees[i]->phone);
     }
 }
 
-void writeToCSV(struct Employee *employees, int numEmployees) {
-    FILE *fp = fopen("employees.csv", "w");
+
+void writeToCSV(struct Employee **employees, int numEmployees) {
+    FILE *fp;
+    char filename[50];
+
+    printf("\nCSVファイル名: ");
+    scanf("%s", filename);
+
+    fp = fopen(filename, "w");
 
     if (fp == NULL) {
-        printf("ファイルを開けませんでした。\n");
-        exit(1);
+        printf("ファイルを開くことができませんでした。\n");
+        return;
     }
 
-    fprintf(fp, "社員番号, 名前, 所属部署, 職位, 電話番号\n");
+    // CSV 파일 헤더
+    fprintf(fp, "社員番号,名前,所属部署,職位,電話番号\n");
+
+    // CSV 파일에 데이터 출력
     for (int i = 0; i < numEmployees; i++) {
-        fprintf(fp, "%d, %s, %s, %s, %s\n", employees[i].employeeNumber, employees[i].name,
-                employees[i].department, employees[i].position, employees[i].phone);
+        fprintf(fp, "%d,%s,%s,%s,%s\n", employees[i]->employeeNumber, employees[i]->name, employees[i]->department, employees[i]->position, employees[i]->phone);
     }
 
     fclose(fp);
