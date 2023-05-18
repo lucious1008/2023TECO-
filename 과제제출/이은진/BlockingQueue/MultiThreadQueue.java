@@ -5,7 +5,7 @@ import java.util.concurrent.BlockingQueue;
 
 public class MultiThreadQueue {
     public static void main(String[] args) {
-        // 블로킹큐생성
+        // b2블로킹큐생성
         BlockingQueue<String> queue = new ArrayBlockingQueue<>(10);
 
         // producer스레드 생성
