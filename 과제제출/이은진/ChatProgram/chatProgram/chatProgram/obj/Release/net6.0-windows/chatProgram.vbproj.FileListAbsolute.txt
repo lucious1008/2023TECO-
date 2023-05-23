@@ -1,0 +1,16 @@
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.vbproj.AssemblyReference.cache
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.AllUserModalForm.resources
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.ChangeNickModalForm.resources
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.ChattingForm.resources
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.DeleteAccountModalForm.resources
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.HistoryChatModalForm.resources
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.JoinForm.resources
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.LoginForm.resources
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.MainForm.resources
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.MypageForm.resources
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.UserModalForm.resources
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.vbproj.GenerateResource.cache
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.AssemblyInfoInputs.cache
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.AssemblyInfo.vb
+C:\Users\TECO001\source\repos\ChatProgram\chatProgram\obj\Release\net6.0-windows\chatProgram.vbproj.CoreCompileInputs.cache
