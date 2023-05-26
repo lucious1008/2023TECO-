@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Main
+Partial Class mainForm
     Inherits System.Windows.Forms.Form
 
     'フォームがコンポーネントの一覧をクリーンアップするために dispose をオーバーライドします。
@@ -24,75 +24,71 @@ Partial Class Main
     Private Sub InitializeComponent()
         Label1 = New Label()
         TextBox1 = New TextBox()
-        LoginBtn = New Button()
+        Login = New Button()
         JoinBtn = New Button()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Yu Gothic UI", 50.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.CausesValidation = False
+        Label1.Font = New Font("Malgun Gothic", 49.8000031F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = SystemColors.Highlight
-        Label1.Location = New Point(28, 43)
+        Label1.Location = New Point(46, 59)
         Label1.Name = "Label1"
-        Label1.Size = New Size(353, 89)
+        Label1.Size = New Size(473, 112)
         Label1.TabIndex = 0
         Label1.Text = "TECO Chat"
         ' 
         ' TextBox1
         ' 
-        TextBox1.Font = New Font("Yu Gothic UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox1.ForeColor = SystemColors.WindowFrame
-        TextBox1.Location = New Point(60, 161)
+        TextBox1.Location = New Point(76, 207)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
-        TextBox1.ReadOnly = True
-        TextBox1.Size = New Size(281, 144)
-        TextBox1.TabIndex = 2
-        TextBox1.Text = "ようこそTECOチャットプログラムに。" & vbCrLf & vbCrLf & "チャットを始めるのはログインが必要です。" & vbCrLf & "IDを持ってない方は会員登録行いください。" & vbCrLf & vbCrLf & "TECOチャットはお互いマーナを守るため、" & vbCrLf & "皆様のご協力をお願いしております。" & vbCrLf
+        TextBox1.Size = New Size(405, 226)
+        TextBox1.TabIndex = 1
+        TextBox1.Text = "ようこそTECOチャットプラグラムに。" & vbCrLf & "チャットを始める方はログインをしてください。" & vbCrLf
         ' 
-        ' LoginBtn
+        ' Login
         ' 
-        LoginBtn.AutoSize = True
-        LoginBtn.Font = New Font("Yu Gothic UI", 25.0F, FontStyle.Regular, GraphicsUnit.Point)
-        LoginBtn.ForeColor = SystemColors.Highlight
-        LoginBtn.Location = New Point(42, 346)
-        LoginBtn.Name = "LoginBtn"
-        LoginBtn.Size = New Size(145, 56)
-        LoginBtn.TabIndex = 3
-        LoginBtn.Text = "Login"
-        LoginBtn.UseVisualStyleBackColor = True
+        Login.AutoSize = True
+        Login.Font = New Font("Malgun Gothic", 20.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Login.Location = New Point(101, 496)
+        Login.Name = "Login"
+        Login.Size = New Size(157, 64)
+        Login.TabIndex = 2
+        Login.Text = "Login"
+        Login.UseVisualStyleBackColor = True
         ' 
         ' JoinBtn
         ' 
-        JoinBtn.AutoSize = True
-        JoinBtn.Font = New Font("Yu Gothic UI", 25.0F, FontStyle.Regular, GraphicsUnit.Point)
-        JoinBtn.ForeColor = SystemColors.Highlight
-        JoinBtn.Location = New Point(203, 346)
+        JoinBtn.Font = New Font("Malgun Gothic", 20.0F, FontStyle.Regular, GraphicsUnit.Point)
+        JoinBtn.Location = New Point(302, 494)
         JoinBtn.Name = "JoinBtn"
-        JoinBtn.Size = New Size(148, 56)
-        JoinBtn.TabIndex = 4
+        JoinBtn.Size = New Size(165, 66)
+        JoinBtn.TabIndex = 3
         JoinBtn.Text = "Join"
         JoinBtn.UseVisualStyleBackColor = True
         ' 
-        ' Main
+        ' MainForm
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(9.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(397, 454)
+        ClientSize = New Size(558, 653)
         Controls.Add(JoinBtn)
-        Controls.Add(LoginBtn)
+        Controls.Add(Login)
         Controls.Add(TextBox1)
         Controls.Add(Label1)
-        Name = "Main"
+        Name = "MainForm"
         Text = "MainForm"
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents LoginBtn As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
     Friend WithEvents JoinBtn As Button
+    Friend WithEvents Login As Button
 End Class

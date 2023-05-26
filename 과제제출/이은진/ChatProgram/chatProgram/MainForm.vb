@@ -1,6 +1,7 @@
-﻿Public Class Main
-    Private Sub LoginBtn_Click(sender As Object, e As EventArgs) Handles LoginBtn.Click
-        Dim loginForm As New LoginForm()
+﻿
+Public Class mainForm
+    Private Sub LoginBtn_Click(sender As Object, e As EventArgs) Handles Login.Click
+        Dim loginForm As New loginForm()
         loginForm.Show()
         Me.Hide()
     End Sub
@@ -10,4 +11,5 @@
         joinForm.Show()
         Me.Hide()
     End Sub
+
 End Class
