@@ -25,13 +25,13 @@ Partial Class DeleteAccountModalForm
         Label1 = New Label()
         closeBtn = New Button()
         Label2 = New Label()
-        Button1 = New Button()
+        UserDelBtn = New Button()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Malgun Gothic", 30.0F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Font = New Font("Malgun Gothic", 30F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = SystemColors.Highlight
         Label1.Location = New Point(163, 97)
         Label1.Name = "Label1"
@@ -41,7 +41,7 @@ Partial Class DeleteAccountModalForm
         ' 
         ' closeBtn
         ' 
-        closeBtn.Font = New Font("Malgun Gothic", 13.0F, FontStyle.Regular, GraphicsUnit.Point)
+        closeBtn.Font = New Font("Malgun Gothic", 13F, FontStyle.Regular, GraphicsUnit.Point)
         closeBtn.Location = New Point(291, 456)
         closeBtn.Name = "closeBtn"
         closeBtn.Size = New Size(198, 55)
@@ -59,22 +59,22 @@ Partial Class DeleteAccountModalForm
         Label2.TabIndex = 5
         Label2.Text = "TECO Chatをご利用頂きありがとうございます。" & vbCrLf & "もっと良いサービスを提供するように労力します。" & vbCrLf
         ' 
-        ' Button1
+        ' UserDelBtn
         ' 
-        Button1.Font = New Font("Malgun Gothic", 13.0F, FontStyle.Regular, GraphicsUnit.Point)
-        Button1.Location = New Point(68, 456)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(198, 55)
-        Button1.TabIndex = 6
-        Button1.Text = "退会"
-        Button1.UseVisualStyleBackColor = True
+        UserDelBtn.Font = New Font("Malgun Gothic", 13F, FontStyle.Regular, GraphicsUnit.Point)
+        UserDelBtn.Location = New Point(68, 456)
+        UserDelBtn.Name = "UserDelBtn"
+        UserDelBtn.Size = New Size(198, 55)
+        UserDelBtn.TabIndex = 6
+        UserDelBtn.Text = "退会"
+        UserDelBtn.UseVisualStyleBackColor = True
         ' 
         ' DeleteAccountModalForm
         ' 
-        AutoScaleDimensions = New SizeF(9.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(558, 653)
-        Controls.Add(Button1)
+        Controls.Add(UserDelBtn)
         Controls.Add(Label2)
         Controls.Add(closeBtn)
         Controls.Add(Label1)
@@ -87,5 +87,5 @@ Partial Class DeleteAccountModalForm
     Friend WithEvents Label1 As Label
     Friend WithEvents closeBtn As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents UserDelBtn As Button
 End Class

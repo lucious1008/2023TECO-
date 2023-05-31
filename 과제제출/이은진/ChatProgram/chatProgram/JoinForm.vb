@@ -10,7 +10,7 @@ Public Class JoinForm
 
     Private Sub JoinForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Not dbConn.OpenConnection() Then
-            MessageBox.Show("데이터베이스 연결을 열 수 없습니다.")
+            MessageBox.Show("DBに接続できません。")
         End If
     End Sub
 
@@ -22,12 +22,12 @@ Public Class JoinForm
         Dim userId As String = JoinIdInput.Text.Trim()
 
         If String.IsNullOrEmpty(userId) Then
-            MessageBox.Show("아이디를 입력해주세요.")
+            MessageBox.Show("IDを入力してください。")
             Return
         End If
 
         If CheckIdDuplicate(userId) Then
-            MessageBox.Show("사용 가능한 아이디입니다.")
+            MessageBox.Show("使用できるIDです。")
         Else
             MessageBox.Show("이미 사용 중인 아이디입니다.")
         End If
@@ -37,7 +37,7 @@ Public Class JoinForm
         Dim nickname As String = JoinNickInput.Text.Trim()
 
         If String.IsNullOrEmpty(nickname) Then
-            MessageBox.Show("닉네임을 입력해주세요.")
+            MessageBox.Show("ニックネームを入力ください。")
             Return
         End If
 
@@ -96,7 +96,7 @@ Public Class JoinForm
             command.Parameters.AddWithValue("@UserId", user.UserId)
             command.Parameters.AddWithValue("@Password", user.Password)
             command.Parameters.AddWithValue("@Nickname", user.Nickname)
-            command.Parameters.AddWithValue("@Role", "User")  ' Role 값을 문자열 'User'로 설정
+            command.Parameters.AddWithValue("@Role", "User")
 
             Dim rowsAffected As Integer = command.ExecuteNonQuery()
             If rowsAffected > 0 Then
@@ -132,7 +132,6 @@ Public Class JoinForm
             Return False
         End If
 
-        ' 영문자와 숫자로 이루어진지 확인
         Dim hasLetter As Boolean = False
         Dim hasNumber As Boolean = False
 

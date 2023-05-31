@@ -24,7 +24,7 @@ Partial Class mainForm
     Private Sub InitializeComponent()
         Label1 = New Label()
         TextBox1 = New TextBox()
-        Login = New Button()
+        Loginbtn = New Button()
         JoinBtn = New Button()
         SuspendLayout()
         ' 
@@ -49,20 +49,20 @@ Partial Class mainForm
         TextBox1.TabIndex = 1
         TextBox1.Text = "ようこそTECOチャットプラグラムに。" & vbCrLf & "チャットを始める方はログインをしてください。" & vbCrLf
         ' 
-        ' Login
+        ' Loginbtn
         ' 
-        Login.AutoSize = True
-        Login.Font = New Font("Malgun Gothic", 20.0F, FontStyle.Regular, GraphicsUnit.Point)
-        Login.Location = New Point(101, 496)
-        Login.Name = "Login"
-        Login.Size = New Size(157, 64)
-        Login.TabIndex = 2
-        Login.Text = "Login"
-        Login.UseVisualStyleBackColor = True
+        Loginbtn.AutoSize = True
+        Loginbtn.Font = New Font("Malgun Gothic", 20F, FontStyle.Regular, GraphicsUnit.Point)
+        Loginbtn.Location = New Point(101, 496)
+        Loginbtn.Name = "Loginbtn"
+        Loginbtn.Size = New Size(157, 64)
+        Loginbtn.TabIndex = 2
+        Loginbtn.Text = "Login"
+        Loginbtn.UseVisualStyleBackColor = True
         ' 
         ' JoinBtn
         ' 
-        JoinBtn.Font = New Font("Malgun Gothic", 20.0F, FontStyle.Regular, GraphicsUnit.Point)
+        JoinBtn.Font = New Font("Malgun Gothic", 20F, FontStyle.Regular, GraphicsUnit.Point)
         JoinBtn.Location = New Point(302, 494)
         JoinBtn.Name = "JoinBtn"
         JoinBtn.Size = New Size(165, 66)
@@ -70,16 +70,16 @@ Partial Class mainForm
         JoinBtn.Text = "Join"
         JoinBtn.UseVisualStyleBackColor = True
         ' 
-        ' MainForm
+        ' mainForm
         ' 
-        AutoScaleDimensions = New SizeF(9.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(558, 653)
         Controls.Add(JoinBtn)
-        Controls.Add(Login)
+        Controls.Add(Loginbtn)
         Controls.Add(TextBox1)
         Controls.Add(Label1)
-        Name = "MainForm"
+        Name = "mainForm"
         Text = "MainForm"
         ResumeLayout(False)
         PerformLayout()
@@ -90,5 +90,5 @@ Partial Class mainForm
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents JoinBtn As Button
-    Friend WithEvents Login As Button
+    Friend WithEvents Loginbtn As Button
 End Class

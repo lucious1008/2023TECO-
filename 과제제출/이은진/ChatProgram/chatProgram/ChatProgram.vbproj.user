@@ -10,6 +10,9 @@
     <Compile Update="ChattingForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ClientForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="DeleteAccountModalForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -26,6 +29,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MypageForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ServerForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserModalForm.vb">

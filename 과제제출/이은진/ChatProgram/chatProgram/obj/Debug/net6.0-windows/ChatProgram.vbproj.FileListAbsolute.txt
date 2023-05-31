@@ -40,3 +40,6 @@ C:\Users\TECO001\Desktop\ChatProgram\ChatProgram\obj\Debug\net6.0-windows\ChatPr
 C:\Users\TECO001\Desktop\ChatProgram\ChatProgram\obj\Debug\net6.0-windows\ChatProgram.HistoryChatModalForm.resources
 C:\Users\TECO001\Desktop\ChatProgram\ChatProgram\obj\Debug\net6.0-windows\ChatProgram.MypageForm.resources
 C:\Users\TECO001\Desktop\ChatProgram\ChatProgram\obj\Debug\net6.0-windows\ChatProgram.UserModalForm.resources
+C:\Users\TECO001\Desktop\ChatProgram\ChatProgram\obj\Debug\net6.0-windows\ChatProgram.ServerForm.resources
+C:\Users\TECO001\Desktop\ChatProgram\ChatProgram\bin\Debug\net6.0-windows\ChatProgram.dll.config
+C:\Users\TECO001\Desktop\ChatProgram\ChatProgram\obj\Debug\net6.0-windows\ChatProgram.ClientForm.resources

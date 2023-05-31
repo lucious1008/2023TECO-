@@ -25,11 +25,11 @@ Partial Class ChangeNickModalForm
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
-        Label4 = New Label()
-        TextBox1 = New TextBox()
+        CurrentNick = New Label()
+        ChgNickInput = New TextBox()
         Label5 = New Label()
         closeBtn = New Button()
-        nickChngBtn = New Button()
+        nickChgBtn = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -63,21 +63,21 @@ Partial Class ChangeNickModalForm
         Label3.TabIndex = 2
         Label3.Text = "変更ニックネーム："
         ' 
-        ' Label4
+        ' CurrentNick
         ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(351, 319)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(53, 20)
-        Label4.TabIndex = 3
-        Label4.Text = "Label4"
+        CurrentNick.AutoSize = True
+        CurrentNick.Location = New Point(351, 319)
+        CurrentNick.Name = "CurrentNick"
+        CurrentNick.Size = New Size(53, 20)
+        CurrentNick.TabIndex = 3
+        CurrentNick.Text = "Label4"
         ' 
-        ' TextBox1
+        ' ChgNickInput
         ' 
-        TextBox1.Location = New Point(276, 427)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(240, 27)
-        TextBox1.TabIndex = 4
+        ChgNickInput.Location = New Point(276, 427)
+        ChgNickInput.Name = "ChgNickInput"
+        ChgNickInput.Size = New Size(240, 27)
+        ChgNickInput.TabIndex = 4
         ' 
         ' Label5
         ' 
@@ -98,26 +98,26 @@ Partial Class ChangeNickModalForm
         closeBtn.Text = "閉じる"
         closeBtn.UseVisualStyleBackColor = True
         ' 
-        ' nickChngBtn
+        ' nickChgBtn
         ' 
-        nickChngBtn.Font = New Font("Malgun Gothic", 13F, FontStyle.Regular, GraphicsUnit.Point)
-        nickChngBtn.Location = New Point(71, 546)
-        nickChngBtn.Name = "nickChngBtn"
-        nickChngBtn.Size = New Size(199, 58)
-        nickChngBtn.TabIndex = 8
-        nickChngBtn.Text = "確認"
-        nickChngBtn.UseVisualStyleBackColor = True
+        nickChgBtn.Font = New Font("Malgun Gothic", 13F, FontStyle.Regular, GraphicsUnit.Point)
+        nickChgBtn.Location = New Point(71, 546)
+        nickChgBtn.Name = "nickChgBtn"
+        nickChgBtn.Size = New Size(199, 58)
+        nickChgBtn.TabIndex = 8
+        nickChgBtn.Text = "確認"
+        nickChgBtn.UseVisualStyleBackColor = True
         ' 
         ' ChangeNickModalForm
         ' 
         AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(558, 653)
-        Controls.Add(nickChngBtn)
+        Controls.Add(nickChgBtn)
         Controls.Add(closeBtn)
         Controls.Add(Label5)
-        Controls.Add(TextBox1)
-        Controls.Add(Label4)
+        Controls.Add(ChgNickInput)
+        Controls.Add(CurrentNick)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -130,9 +130,9 @@ Partial Class ChangeNickModalForm
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents CurrentNick As Label
+    Friend WithEvents ChgNickInput As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents closeBtn As Button
-    Friend WithEvents nickChngBtn As Button
+    Friend WithEvents nickChgBtn As Button
 End Class

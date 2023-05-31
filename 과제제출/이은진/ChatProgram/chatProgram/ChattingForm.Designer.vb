@@ -29,7 +29,7 @@ Partial Class ChattingForm
         LogoutBtn = New Button()
         MypageBtn = New Button()
         OnlineUserChk = New ListView()
-        Label2 = New Label()
+        currentId = New Label()
         SuspendLayout()
         ' 
         ' ChatSendBtn
@@ -93,21 +93,21 @@ Partial Class ChattingForm
         OnlineUserChk.TabIndex = 6
         OnlineUserChk.UseCompatibleStateImageBehavior = False
         ' 
-        ' Label2
+        ' currentId
         ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(463, 70)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(53, 20)
-        Label2.TabIndex = 7
-        Label2.Text = "Label2"
+        currentId.AutoSize = True
+        currentId.Location = New Point(287, 79)
+        currentId.Name = "currentId"
+        currentId.Size = New Size(53, 20)
+        currentId.TabIndex = 7
+        currentId.Text = "Label2"
         ' 
         ' ChattingForm
         ' 
         AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(558, 653)
-        Controls.Add(Label2)
+        Controls.Add(currentId)
         Controls.Add(OnlineUserChk)
         Controls.Add(MypageBtn)
         Controls.Add(LogoutBtn)
@@ -128,5 +128,5 @@ Partial Class ChattingForm
     Friend WithEvents LogoutBtn As Button
     Friend WithEvents MypageBtn As Button
     Friend WithEvents OnlineUserChk As ListView
-    Friend WithEvents Label2 As Label
+    Friend WithEvents currentId As Label
 End Class
