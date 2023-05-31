@@ -1,0 +1,11 @@
+G:\개인프로젝트\채팅\Server\Server\obj\Debug\ResolveAssemblyReference.cache
+G:\개인프로젝트\채팅\Server\Server\bin\Debug\Server.exe
+G:\개인프로젝트\채팅\Server\Server\bin\Debug\Server.pdb
+G:\개인프로젝트\채팅\Server\Server\obj\Debug\Server.exe
+G:\개인프로젝트\채팅\Server\Server\obj\Debug\Server.pdb
+C:\Users\chan\Desktop\ajrdj\Server\Server\bin\Debug\Server.exe
+C:\Users\chan\Desktop\ajrdj\Server\Server\bin\Debug\Server.pdb
+C:\Users\chan\Desktop\ajrdj\Server\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\chan\Desktop\ajrdj\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\chan\Desktop\ajrdj\Server\Server\obj\Debug\Server.exe
+C:\Users\chan\Desktop\ajrdj\Server\Server\obj\Debug\Server.pdb

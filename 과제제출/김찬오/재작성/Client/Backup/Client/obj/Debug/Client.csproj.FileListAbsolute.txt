@@ -1,0 +1,9 @@
+C:\Users\chan\Desktop\ajrdj\Client\Backup\Client\bin\Debug\Client.exe
+C:\Users\chan\Desktop\ajrdj\Client\Backup\Client\bin\Debug\Client.pdb
+C:\Users\chan\Desktop\ajrdj\Client\Backup\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\chan\Desktop\ajrdj\Client\Backup\Client\obj\Debug\Client.Client.resources
+C:\Users\chan\Desktop\ajrdj\Client\Backup\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\chan\Desktop\ajrdj\Client\Backup\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\chan\Desktop\ajrdj\Client\Backup\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\chan\Desktop\ajrdj\Client\Backup\Client\obj\Debug\Client.exe
+C:\Users\chan\Desktop\ajrdj\Client\Backup\Client\obj\Debug\Client.pdb
