@@ -1,0 +1,55 @@
+疑似コード
+
+//헤더 파일들을 추가
+#include
+<stdio.h> //표준 라이브러리 함수의 매크로 정의, 상수, 여러 형의 입출력 함수가 포함된 헤더 파일
+<stdlib.h> //문자열 변환, 의사 난수 생성, 동적 메모리 관리 등의 함수들을 포함
+<stdbool.h> // 참과 거짓을 나누는 1bit짜리 변수 타입
+<string.h> //메모리 블록이나 문자열을 다룰 수 있는 함수
+
+#define 
+MAX_SEATS 30 객실의 최대 좌석 수
+RESERVED_TRAIN 5000 (예약석 +5000원)
+GENERAL_TRAIN_PRICE 10000 (일반열차+비예약 10000원)
+EXPRESS_TRAIN_PRICE 20000 (특급열차+비예약 20000원)
+
+//struct Traintype(열차 종류) //구조체를 이용하여 Express Train(특급 열차), General Train(보통 열차) 기차 종류를 정의합니다.
+//숫자 유효성 검사 1과2 사이에서만 선택 
+
+//struct TrainReservation(열차 예약) //구조체를 이용하여 Traintype(열차 종류) 구조체를 TrainReservation구조체 안에 넣어 열차예약을 위해 정의합니다.
+ SeatNumber(열차 좌석),DepartureStation(출발역), ArrivalStation(도착역),DepartureTime(출발시간), ArrivalTime(도착시간)을 정의합니다.
+
+//숫자 유효성 검사
+  SeatNumber(열차 좌석) 1~30까지의 수가 유효한지 확인합니다.
+
+//함수 정의 
+TicketPrice 함수 안에 TrainReservation(열차예약) 구조체를 정의하고 매개변수를 선언합니다.
+특급열차 가격과 보통열차 가격을 설정하고 예약석과 비예약석의 가격도 설정합니다. 1~15까지는 비예약석, 16~30까지는 예약석으로 처리합니다. 
+예약석의 경우 비예약석 금액에서 5000원의 추가요금을 발생시킵니다.
+
+int main() //메인
+
+//입력
+//DepartureStation(출발역)을 입력받습니다.
+//ArrivalStation(도착역)을 입력받습니다.
+
+//DepartureTime(출발 시간)을 입력 받습니다.
+//ArrivalTime(도착 시간)을 입력 받습니다.
+//출발 도착 시간은 정수 4자리로 입력 받기로합니다.
+
+//TrainType열차 종류를 1.Express 2.General 중 정수1이나 2를 입력받습니다.
+
+//SeatNumber(열차 좌석)을 1~30까지만 입력 받습니다.
+
+
+//출력
+//--------------------------예약 성공 메시지---------------------- 을 출력합니다.
+//DepartureStation(출발역)->ArrivalStation(도착역)을 출력합니다.
+//DepartureTime(출발 시간) -> ArrivalTime(도착 시간)을 출력합니다.
+//입력 받은 TrainType열차 종류를 1.Express 2.General if문을 사용하여
+//1을 선택시 TrainType : Express Train이, 2를 선택시 TrainType : General Train이 같이 출력되도록 합니다. 
+//SeatNumber(열차 좌석)을 1~30까지만 입력 받습니다. 
+//열차 좌석 또한 1~15까지는 입력받은 수 + Non_Reserved를 출력, 16~30까지는 입력받은 수 + Reserved를 출력합니다.
+//-------------------------------밑줄---------------------------- 을 출력합니다.
+
+리턴 0;
