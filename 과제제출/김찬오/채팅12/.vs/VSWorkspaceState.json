@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\채팅01",
+    "\\채팅01\\ChatProgram",
+    "\\채팅01\\ChatProgram\\Model",
+    "\\채팅01\\ChatProgram\\Model\\ChatProtocol",
+    "\\채팅01\\ChatProgram\\Model\\Network",
+    "\\채팅01\\ChatProgram\\Properties",
+    "\\채팅01\\ChatProgram\\View",
+    "\\채팅01\\ChatProgram\\ViewModel"
+  ],
+  "SelectedNode": "\\채팅01\\ChatProgram\\View",
+  "PreviewInSolutionExplorer": false
+}
