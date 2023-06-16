@@ -1,0 +1,66 @@
+
+typedef struct	                  	//열차정보
+{
+    int TrainNum;			//열차번호
+    char TrainType[20];		//열차타입
+    char StartTime[10];		//출발시간
+    char EndTime[10];		//도착시간
+    char StartEky[10];		//출발역
+    char EndEky[10];		//도착역
+} TrainInfo;
+
+typedef struct			//좌석정보
+{
+    int SeatNum;              		//좌석번호
+    char SeatKind[5];         		//좌석종류
+    int SeatPrice;       		//좌석금액
+} SeatInfo;
+
+typedef struct                     	//역정보
+{
+    char EkyName[20];
+} EkyInfo;
+				//트레인 구조체를 담을 포인터와 그외에 값들을 받고 초기화
+void SetTrainInfo(TrainInfo *train, int TrainNum, const char *TrainType,  
+		const char *StartTime, const char *EndTime,
+		const char *StartEky, const char *EndEky)
+{
+    strcpy(train->TrainType,TrainType);	//열차타입 초기화
+    strcpy(train->StartTime,StartTime);	//출발시간 초기화
+    strcpy(train->EndTime,EndTime);	//도착시간 초기화
+    strcpy(train->StartEky,StartEky);	//출발역 초기화
+    strcpy(train->EndEky,EndEky);	//도착역 초기화
+};
+				//좌석정보에 대한값 초기화
+void SetSeatInfo(SeatInfo *seat, int SeatNum, const char *SeatKind,int SeatPrice)
+{
+    seat -> SeatNum = SeatNum;	//좌석번호 초기화
+    strcpy(seat->SeatKind,SeatKind);	//좌석종류 초기화
+    seat -> SeatPrice = SeatPrice;	//좌석금액 초기화
+};
+
+int main()
+{
+    // 입력값 받기
+    // 출발역 도착역
+    // 시간(출발,도착)
+
+    // 유효성검사
+
+    // DB에 열차를 검색한다
+    // 출발역 도착역에 맞는 열차 중에 시간 조건이 일치하는 열차를 출력한다
+    // TrainInfo(startEki, touchakuEki, time, isStart);배열로 받음
+
+    // 유저에게 보여줘야함
+    // showTrainView(m_train);
+    // 조건에 맞는 열차의 정보를 표시한다 표시하는 내용으로는 아래와 같다
+    // 열차 종류, 출발 시간, 출발 도착역
+
+    // 유저의 입력을 기다림
+    // 유효성 검사
+
+    // 열차 번호를 얻는다
+
+    // 좌석정보를 찾는다
+    // getSeatInfo(TrainNum)
+}
